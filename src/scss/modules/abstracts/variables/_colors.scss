@@ -1,13 +1,17 @@
 // 単色
 $colors: (
-  'main': #1c468b,
-  'main-light': #335ab4,
+  'main': #267c3a,
   'black': #333,
   'white': #fff,
-  'red': #ac3838,
+  'red': #ae282e,
+  'green': #267c3a,
+  'blue': #00aebb,
+  'pink': #eb677d,
+  'gray': #727171,
+  'gray-light': #eaeaea,
 );
 
 // グラデーション
 $gradients: (
-  'yellow-orange-red': linear-gradient(100deg, map.get($colors, 'yellow') 0%, map.get($colors, 'orange') 60%, map.get($colors, 'red') 100%),
+  'main': linear-gradient(90deg, #2e7e3b 0%, #3da84e 100%),
 );
