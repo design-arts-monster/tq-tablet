@@ -15,26 +15,6 @@
   .mv {
     text-align: center;
   }
-
-  .mv-cta {
-    padding-block-start: 80px;
-    padding-block-end: 60px;
-
-    .mv-cta-text {
-      @include font-rem(24);
-
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .mv-cta-link {
-      @include font-rem(24);
-
-      max-width: 440px;
-      margin-block-start: 30px;
-      margin-inline: auto;
-    }
-  }
 }
 
 /* Movie
@@ -150,5 +130,103 @@
     padding-block-start: 50px;
     padding-block-end: 20px;
     background-color: #fff7ec;
+  }
+}
+
+/* generation
+--------------------------------------------- */
+#generation {
+  .generation-wrap {
+    padding-block-start: 100px;
+
+    .generation-caption {
+      @include font-rem(40);
+
+      font-weight: bold;
+
+      .voice {
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        margin-inline-start: 0.25em;
+        line-height: 80px;
+        color: map.get($colors, 'white');
+        text-align: center;
+        vertical-align: baseline;
+        background-color: map.get($colors, 'main');
+        border-radius: 999px;
+
+        &::after {
+          position: absolute;
+          right: 0;
+          bottom: -9px;
+          display: block;
+          width: 14px;
+          height: 25px;
+          content: '';
+          background-color: map.get($colors, 'main');
+          rotate: -41deg;
+        }
+      }
+    }
+
+    .generation-card {
+      $offset: 40px;
+
+      width: 57%;
+      padding-block-end: 60px;
+      background-color: #fff7ec;
+      border-radius: 20px;
+      box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 20%);
+
+      &.left {
+        translate: $offset 0;
+
+        .generation-card-image {
+          translate: -#{$offset} 0;
+        }
+      }
+
+      &.right {
+        translate: -#{$offset} 0;
+
+        .generation-card-image {
+          translate: $offset 0;
+        }
+      }
+
+      .generation-card-caption {
+        @include font-rem(24);
+
+        display: inline-block;
+        padding-block: 0.75em;
+        padding-inline: 8.7%;
+        font-weight: bold;
+        color: map.get($colors, 'white');
+        background-color: map.get($colors, 'main');
+        border-radius: 20px 0;
+      }
+
+      .generation-card-text {
+        padding-block-start: 30px;
+        padding-inline: 8.7%;
+        line-height: 1.875;
+      }
+    }
+
+    .generation-inner-heading {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .generation-inner {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-block-start: 75px;
+    }
   }
 }
