@@ -51,6 +51,8 @@
 
   @media (hover: hover) {
     &:hover {
+      text-decoration: none;
+
       .cp-link-button-wrap {
         box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
         translate: 0 $offset;
