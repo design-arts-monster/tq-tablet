@@ -1,0 +1,51 @@
+/* Caption
+--------------------------------------------- */
+
+%base {
+  @include font-rem(38);
+
+  &.small {
+    @include font-rem(30);
+  }
+
+  font-weight: bold;
+  text-align: center;
+
+  .image {
+    display: block;
+    text-align: center;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.cp-caption {
+    &-green {
+      @extend %base;
+
+      color: map.get($colors, 'green');
+    }
+
+    &-black {
+      @extend %base;
+
+      color: map.get($colors, 'black');
+    }
+
+    &-blue {
+      @extend %base;
+
+      color: map.get($colors, 'blue');
+    }
+
+    &-red {
+      @extend %base;
+
+      color: map.get($colors, 'red');
+    }
+  }
+}
