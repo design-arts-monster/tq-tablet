@@ -91,3 +91,53 @@
     background-color: #f2f7e7;
   }
 }
+
+/* support
+--------------------------------------------- */
+#support {
+  .support-wrap {
+    padding-block: 50px;
+
+    .support-heading-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .support-heading {
+        font-weight: bold;
+        line-height: 1.2;
+
+        @include font-rem(28);
+
+        .strong {
+          @include font-rem(42);
+
+          color: map.get($colors, 'main');
+
+          .num {
+            @include font-rem(75);
+          }
+        }
+      }
+    }
+
+    .support-text-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-block-start: 75px;
+
+      .support-text {
+        @include font-rem(21);
+
+        line-height: 1.9;
+      }
+    }
+
+    .support-note {
+      text-align: right;
+
+      @include font-rem(14);
+    }
+  }
+}
