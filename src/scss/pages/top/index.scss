@@ -4,3 +4,35 @@
 /* Import common.
 --------------------------------------------- */
 @import './../../common/common';
+
+/* --------------------------------------------------------------
+# main
+-------------------------------------------------------------- */
+
+/* Main Visual
+--------------------------------------------- */
+#mv {
+  .mv {
+    text-align: center;
+  }
+
+  .mv-cta {
+    padding-block-start: 80px;
+    padding-block-end: 60px;
+
+    .mv-cta-text {
+      @include font-rem(24);
+
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .mv-cta-link {
+      @include font-rem(24);
+
+      max-width: 440px;
+      margin-block-start: 30px;
+      margin-inline: auto;
+    }
+  }
+}

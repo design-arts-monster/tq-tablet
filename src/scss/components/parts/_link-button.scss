@@ -38,6 +38,17 @@
     }
   }
 
+  &.arrow-large {
+    .cp-link-button-wrap {
+      &::after {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-top-width: 3px;
+        border-right-width: 3px;
+      }
+    }
+  }
+
   @media (hover: hover) {
     &:hover {
       .cp-link-button-wrap {
