@@ -1,0 +1,32 @@
+// rem
+// 参考：https://blanche-toile.com/web/css-font-size-definition
+$root-font-size: 16;
+
+@mixin font-rem($font-size-px) {
+  font-size: calc($font-size-px / $root-font-size) * 1rem;
+}
+
+// Responsive
+// 参考：https://www.tam-tam.co.jp/tipsnote/html_css/post10708.html
+@mixin mq-up($breakpoint: md) {
+  @media #{map.get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map.get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+// レスポンシブ非表示
+@mixin responsive($class, $bp: $breakpoint-up) {
+  @each $suffix, $value in $bp {
+    @media #{$value} {
+      #{$class}-#{$suffix} {
+        @content;
+      }
+    }
+  }
+}
