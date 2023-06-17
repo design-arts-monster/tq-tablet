@@ -36,3 +36,47 @@
     }
   }
 }
+
+/* Movie
+--------------------------------------------- */
+#movie {
+  .movie {
+    max-height: 453px;
+    background-color: #edf5e0;
+
+    .iframe {
+      position: relative;
+      z-index: 2;
+      max-width: 690px;
+      margin-block-start: 30px;
+      margin-inline: auto;
+
+      iframe {
+        width: 100%;
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  .charm {
+    padding-block-start: 360px;
+
+    .charm-caption {
+      @include font-rem(38);
+
+      margin-block-end: 1.3em;
+      font-weight: bold;
+    }
+
+    .charm-text {
+      @include font-rem(18);
+
+      line-height: 2.2;
+    }
+
+    .charm-iamge {
+      margin-block-start: 70px;
+      text-align: right;
+    }
+  }
+}

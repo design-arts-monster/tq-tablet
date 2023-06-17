@@ -3,11 +3,15 @@
 @mixin stripe($color, $color-second, $position: 'right', $deg: 135deg) {
   position: relative;
 
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
   &::after {
     position: absolute;
     top: 0;
     bottom: 0;
-    z-index: -1;
     display: block;
     content: '';
     background: repeating-linear-gradient(#{$deg}, #{$color}, #{$color} 10px, #{$color-second} 10px, #{$color-second} 20px);
