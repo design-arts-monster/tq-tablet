@@ -230,3 +230,56 @@
     }
   }
 }
+
+/* price
+--------------------------------------------- */
+#price {
+  padding-block: 90px;
+  background-color: #fffcf7;
+
+  .price-caption {
+    margin-block-end: 70px;
+  }
+
+  .price-wrap {
+    &:not(:first-of-type) {
+      margin-block-start: 90px;
+    }
+
+    .price-name {
+      @include font-rem(26);
+
+      max-width: 290px;
+      padding-block: 10px;
+      margin-inline: auto;
+      font-weight: bold;
+      text-align: center;
+      background-color: map.get($colors, 'white');
+      border-radius: 999px;
+      box-shadow: 0 2px 0 0 rgb(0 0 0 / 20%);
+    }
+
+    .price-content {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+      margin-block-start: 45px;
+
+      .price-content-separator {
+        @include font-rem(26);
+
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+      }
+    }
+  }
+
+  .price-note {
+    max-width: 800px;
+    margin-block-start: 60px;
+    margin-inline: auto;
+    line-height: 1.75;
+  }
+}

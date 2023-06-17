@@ -1,0 +1,87 @@
+/* Price Card
+--------------------------------------------- */
+%price-card-base {
+  width: 100%;
+  max-width: 312px;
+  text-align: center;
+  background-color: map.get($colors, 'white');
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+
+  dt {
+    @include font-rem(24);
+
+    padding-block: 0.5em;
+    font-weight: bold;
+    color: map.get($colors, 'white');
+
+    .small {
+      @include font-rem(16);
+
+      display: block;
+    }
+  }
+
+  dd {
+    padding-block: 20px;
+    font-weight: bold;
+    text-align: center;
+
+    .yen {
+      @include font-rem(24);
+    }
+
+    .price {
+      @include font-rem(32);
+    }
+
+    .tax {
+      @include font-rem(16);
+    }
+  }
+}
+
+.cp-price-card {
+  &-red {
+    @extend %price-card-base;
+
+    border-color: map.get($colors, 'red');
+
+    dt {
+      background-color: map.get($colors, 'red');
+    }
+
+    dd {
+      color: map.get($colors, 'red');
+    }
+  }
+
+  &-green {
+    @extend %price-card-base;
+
+    border-color: map.get($colors, 'green');
+
+    dt {
+      background-color: map.get($colors, 'green');
+    }
+
+    dd {
+      color: map.get($colors, 'green');
+    }
+  }
+
+  &-blue {
+    @extend %price-card-base;
+
+    border-color: map.get($colors, 'blue');
+
+    dt {
+      background-color: map.get($colors, 'blue');
+    }
+
+    dd {
+      color: map.get($colors, 'blue');
+    }
+  }
+}
