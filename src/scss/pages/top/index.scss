@@ -450,4 +450,36 @@
       }
     }
   }
+
+  .plan-cta {
+    padding-block-start: 140px;
+    padding-block-end: 110px;
+
+    .plan-cta-text {
+      @include font-rem(30);
+
+      font-weight: bold;
+      text-align: center;
+
+      .red {
+        color: map.get($colors, 'red');
+      }
+    }
+
+    .plan-cta-content {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+      margin-block-start: 45px;
+
+      .plan-cta-content-separator {
+        @include font-rem(26);
+
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+      }
+    }
+  }
 }

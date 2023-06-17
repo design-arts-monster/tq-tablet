@@ -26,7 +26,14 @@
   dd {
     padding-block: 20px;
     font-weight: bold;
+    line-height: 1.2;
     text-align: center;
+
+    .fee {
+      @include font-rem(16);
+
+      display: block;
+    }
 
     .yen {
       @include font-rem(24);
