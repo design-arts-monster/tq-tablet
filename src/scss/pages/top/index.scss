@@ -283,3 +283,171 @@
     line-height: 1.75;
   }
 }
+
+/* plan
+--------------------------------------------- */
+#plan {
+  .plan {
+    padding-block-end: 140px;
+    background-color: #fffcf7;
+
+    .plan-heading {
+      padding-block-end: 40px;
+
+      .plan-caption {
+        @include font-rem(26);
+
+        display: inline-block;
+        padding-block: 20px;
+        padding-inline-start: calc(40px + ((100vw - 1000px) / 2));
+        padding-inline-end: 50px;
+        font-weight: bold;
+        border-radius: 0 0 28px;
+        translate: calc((100vw - 1000px) / 2 * -1);
+      }
+
+      .plan-heading-text {
+        @include font-rem(40);
+
+        margin-block-start: 1.25em;
+        margin-block-end: 1em;
+        font-weight: bold;
+        line-height: 1.55;
+      }
+
+      .plan-traffic {
+        @include font-rem(21);
+
+        display: inline-block;
+        padding-block: 5px;
+        padding-inline: 35px;
+        font-weight: bold;
+        border-radius: 5px;
+
+        .strong {
+          .num {
+            @include font-rem(32);
+          }
+        }
+      }
+
+      .plan-price {
+        margin-block-start: 30px;
+        font-weight: bold;
+
+        .text {
+          @include font-rem(20);
+        }
+
+        .yen {
+          @include font-rem(32);
+        }
+
+        .price {
+          @include font-rem(40);
+        }
+      }
+    }
+
+    .plan-description {
+      @include font-rem(18);
+
+      font-weight: bold;
+      line-height: 1.88;
+    }
+
+    .plan-note {
+      @include font-rem(16);
+
+      font-weight: bold;
+    }
+
+    &.green {
+      .plan-heading {
+        .plan-caption {
+          color: map.get($colors, 'white');
+          background-color: #3b7e4b;
+        }
+
+        .plan-heading-text {
+          color: #2a8339;
+        }
+
+        .plan-traffic {
+          color: map.get($colors, 'white');
+          background-color: #69a772;
+        }
+      }
+    }
+
+    &.blue {
+      .plan-heading {
+        .plan-caption {
+          color: map.get($colors, 'white');
+          background-color: #06a6b2;
+        }
+
+        .plan-heading-text {
+          color: #06a6b2;
+        }
+
+        .plan-traffic {
+          color: map.get($colors, 'white');
+          background-color: #50c0c7;
+        }
+      }
+    }
+  }
+
+  .plan-function {
+    margin-block-start: 70px;
+
+    .plan-function-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 60px;
+      column-gap: 7%;
+
+      .plan-function-card {
+        width: 46.5%;
+
+        .plan-function-card-name {
+          @include font-rem(24);
+
+          display: inline-block;
+          padding-block: 12px;
+          padding-inline: 70px;
+          font-weight: bold;
+          color: map.get($colors, 'white');
+          background-color: map.get($colors, 'green');
+          border-radius: 10px 10px 0 0;
+        }
+
+        .plan-function-card-wrap {
+          overflow: hidden;
+          background-color: map.get($colors, 'white');
+          border-radius: 0 25px 25px;
+
+          .plan-function-card-content {
+            padding-block: 30px;
+            padding-inline: 40px;
+
+            .plan-function-card-content-caption {
+              @include font-rem(21);
+
+              font-weight: bold;
+              color: map.get($colors, 'green');
+            }
+
+            .plan-function-card-content-text {
+              @include font-rem(14);
+
+              margin-block-start: 0.75em;
+              line-height: 1.725;
+            }
+          }
+        }
+      }
+    }
+  }
+}
