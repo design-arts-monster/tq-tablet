@@ -21,26 +21,28 @@
   }
 }
 
-.cp-bg-stripe-movie-green {
-  @include stripe('#d2eac6', '#edf5e0');
-}
+.cp-bg-stripe {
+  &-movie-green {
+    @include stripe('#d2eac6', '#edf5e0');
+  }
 
-.cp-bg-stripe-movie-white {
-  @include stripe('#d1edd4', '#fff');
-}
+  &-movie-green-white {
+    @include stripe('#d1edd4', '#fff');
+  }
 
-.cp-bg-stripe-plan-basic {
-  @include stripe('#f2f5e2', '#f8f9ee');
-}
+  &-plan-basic {
+    @include stripe('#f2f5e2', '#f8f9ee');
+  }
 
-.cp-bg-stripe-plan-premium {
-  @include stripe('#e5f4f1', '#f2f8f4');
-}
+  &-plan-premium {
+    @include stripe('#e5f4f1', '#f2f8f4');
+  }
 
-.cp-bg-stripe-qa {
-  @include stripe('#fef7ae', '#fffbd7', 'fill');
-}
+  &-qa {
+    @include stripe('#fef7ae', '#fffbd7', 'fill');
+  }
 
-.cp-bg-stripe-company {
-  @include stripe('#f7e9ea', '#fbf4f4');
+  &-company {
+    @include stripe('#f7e9ea', '#fbf4f4');
+  }
 }
