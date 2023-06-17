@@ -29,3 +29,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+a {
+  color: map.get($colors, 'black');
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

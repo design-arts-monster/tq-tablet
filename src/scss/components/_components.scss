@@ -1,52 +1,22 @@
 // use map.get.
 @use 'sass:map';
 
+/* --------------------------------------------------------------
+# parts
+-------------------------------------------------------------- */
+
 /* Link Button
 --------------------------------------------- */
-.cp-link-button {
-  $offset: 5px;
+@import 'parts/link-button';
 
-  position: relative;
-  max-width: 100%;
-  color: map.get($colors, 'white');
-  text-decoration: none;
+/* --------------------------------------------------------------
+# layout
+-------------------------------------------------------------- */
 
-  .cp-link-button-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-block: 1rem;
-    padding-inline: 1.5rem;
-    font-weight: bold;
-    background-color: map.get($colors, 'main');
-    border-radius: 999px;
-    box-shadow: 0 $offset 10px 0 rgb(0 0 0 / 20%);
-    transition: all 0.2s;
+/* header
+--------------------------------------------- */
+@import 'layout/header';
 
-    &::after {
-      display: inline-block;
-      width: 0.625rem;
-      height: 0.625rem;
-      margin-inline-start: 1rem;
-      content: '';
-      border-top: 2px solid map.get($colors, 'white');
-      border-right: 2px solid map.get($colors, 'white');
-      transform: rotate(45deg);
-    }
-  }
-
-  &.gradients {
-    .cp-link-button-wrap {
-      background: map.get($gradients, 'main');
-    }
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      .cp-link-button-wrap {
-        box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
-        translate: 0 $offset;
-      }
-    }
-  }
-}
+/* footer
+--------------------------------------------- */
+@import 'layout/footer';
