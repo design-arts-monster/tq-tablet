@@ -483,3 +483,228 @@
     }
   }
 }
+
+/* process
+--------------------------------------------- */
+#process {
+  .process {
+    padding-block: 90px;
+    background-color: #e7f3e4;
+
+    .process-text {
+      @include font-rem(21);
+
+      margin-block-start: 40px;
+      font-weight: bold;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .process-flow {
+      margin-block-start: 100px;
+      counter-reset: item;
+
+      li {
+        $offset: 40px;
+
+        position: relative;
+        margin-inline-start: $offset;
+        background-color: map.get($colors, 'white');
+        border-radius: 50px;
+
+        &:not(:first-child) {
+          margin-block-start: 100px;
+        }
+
+        &::before {
+          @include font-rem(48);
+
+          position: absolute;
+          top: -50px;
+          left: -#{$offset};
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 92px;
+          height: 92px;
+          font-weight: bold;
+          line-height: 1;
+          color: map.get($colors, 'white');
+          content: counter(item);
+          counter-increment: item;
+          background-color: map.get($colors, 'main');
+          border-radius: 999px;
+        }
+
+        .process-flow-content {
+          padding: 40px;
+        }
+      }
+
+      .process-arrow {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          right: 0;
+          bottom: -110px;
+          left: 0;
+          width: 0;
+          height: 0;
+          margin: auto;
+          content: '';
+          border-color: map.get($colors, 'gray') transparent transparent;
+          border-style: solid;
+          border-width: 28px 30px 0;
+        }
+      }
+
+      .process-flow-content-case {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+
+        .process-flow-content-case-item {
+          position: relative;
+          flex: 1;
+          text-align: center;
+
+          &.process-flow-content-case-user {
+            color: map.get($colors, 'blue');
+
+            &.process-arrow {
+              &::after {
+                border-color: map.get($colors, 'blue') transparent transparent;
+              }
+            }
+          }
+
+          &.process-flow-content-case-buyer {
+            color: map.get($colors, 'pink');
+
+            &.process-arrow {
+              &::after {
+                border-color: map.get($colors, 'pink') transparent transparent;
+              }
+            }
+          }
+
+          &:not(:first-of-type) {
+            &::before {
+              position: absolute;
+              top: 40px;
+              bottom: 40px;
+              left: -1px;
+              display: block;
+              width: 3px;
+              margin: auto;
+              content: '';
+              background-image: linear-gradient(to bottom, #000 3px, transparent 3px);
+              background-repeat: repeat-y;
+              background-position: left bottom;
+              background-size: 3px 8px;
+            }
+          }
+
+          .process-flow-content-case-text {
+            @include font-rem(18);
+
+            font-weight: bold;
+          }
+
+          .process-flow-content-case-caption {
+            @include font-rem(24);
+
+            display: inline-flex;
+            align-items: center;
+            min-height: 2em * 1.25;
+            font-weight: bold;
+          }
+
+          .process-flow-content-case-description {
+            @include font-rem(18);
+
+            display: inline-flex;
+            align-items: center;
+            min-height: 2em * 1.6;
+            color: map.get($colors, 'black');
+          }
+        }
+      }
+
+      .process-flow-entry {
+        .process-flow-content-wrap {
+          display: flex;
+          column-gap: 60px;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .process-flow-entry-inner {
+          width: 100%;
+          max-width: 260px;
+
+          .process-flow-entry-text {
+            @include font-rem(24);
+
+            margin-block-end: 30px;
+            font-weight: bold;
+            text-align: center;
+          }
+
+          .cp-link-button {
+            @include font-rem(21);
+
+            .cp-link-button-wrap {
+              background-color: #295f35;
+            }
+          }
+        }
+      }
+
+      .process-flow-signup {
+        .process-flow-signup-caption {
+          @include font-rem(24);
+
+          margin-block-end: 30px;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+
+    .process-message {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-block-start: 100px;
+
+      .process-message-balloon {
+        @include font-rem(21);
+
+        position: relative;
+        padding-block: 30px;
+        padding-inline: 40px;
+        color: map.get($colors, 'white');
+        background-color: #c5a36e;
+        border-radius: 20px;
+
+        &::after {
+          position: absolute;
+          top: 0;
+          right: -30px;
+          bottom: 0;
+          width: 0;
+          height: 0;
+          margin: auto;
+          content: '';
+          border-style: solid;
+          border-top: 17px solid transparent;
+          border-right: 0;
+          border-bottom: 17px solid transparent;
+          border-left: 30px solid #c5a36e;
+        }
+      }
+    }
+  }
+}

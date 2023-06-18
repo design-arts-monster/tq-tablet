@@ -15,10 +15,21 @@
     padding-block: 1rem;
     padding-inline: 1.5rem;
     font-weight: bold;
+    text-align: center;
     background-color: map.get($colors, 'main');
     border-radius: 999px;
     box-shadow: 0 $offset 10px 0 rgb(0 0 0 / 20%);
     transition: all 0.2s;
+
+    &:has(.small) {
+      padding-block: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .small {
+      display: block;
+      font-size: 0.75em;
+    }
 
     &::after {
       display: inline-block;
