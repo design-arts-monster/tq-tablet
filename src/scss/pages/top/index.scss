@@ -770,3 +770,116 @@
     }
   }
 }
+
+/* device
+--------------------------------------------- */
+#device {
+  .device {
+    padding-block: 100px;
+    background-color: #f8f6f4;
+
+    .device-wrap {
+      padding-block: 80px;
+      padding-inline: 100px;
+      background-color: map.get($colors, 'white');
+      border-radius: 30px;
+    }
+
+    .device-bundle {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-around;
+      margin-block-start: 60px;
+
+      .col-2 {
+        width: 50%;
+      }
+
+      .col-3 {
+        width: 33%;
+      }
+
+      .device-bundle-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .device-bundle-item-name {
+          gap: 30px;
+          text-align: center;
+        }
+      }
+    }
+
+    .device-image-wrap {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      margin-block-start: 90px;
+
+      .device-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      .device-image-text {
+        @include font-rem(21);
+
+        padding-block: 40px;
+        padding-inline: 120px;
+        font-weight: bold;
+        line-height: 1.9;
+        background-color: #cceff1;
+        border-radius: 20px;
+      }
+    }
+
+    .device-spec {
+      margin-block-start: 90px;
+      text-align: center;
+
+      .device-spec-controller {
+        @include font-rem(21);
+
+        position: relative;
+        width: 100%;
+        max-width: 435px;
+        padding-block: 15px;
+        margin-inline: auto;
+        font-weight: bold;
+        text-align: center;
+        background-color: #d3e6b1;
+        border-radius: 999px;
+
+        &::before,
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 50px;
+          bottom: 0;
+          display: block;
+          width: 18px;
+          height: 2px;
+          margin: auto;
+          content: '';
+          background-color: map.get($colors, 'black');
+          transition: all 0.2s;
+        }
+
+        &::after {
+          rotate: 90deg;
+        }
+
+        &.open {
+          &::after {
+            rotate: 0deg;
+          }
+        }
+      }
+    }
+  }
+}
