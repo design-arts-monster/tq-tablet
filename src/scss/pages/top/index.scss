@@ -710,7 +710,7 @@
   }
 }
 
-/* process
+/* app
 --------------------------------------------- */
 #app {
   .app {
@@ -732,6 +732,41 @@
       max-width: 800px;
       margin-inline: auto;
       line-height: 2.2;
+    }
+  }
+}
+
+/* sponsor
+--------------------------------------------- */
+#sponsor {
+  .sponsor {
+    padding-block: 100px;
+    background-color: #f9f0e7;
+
+    .sponsor-wrap {
+      display: flex;
+      column-gap: 5%;
+      margin-block-start: 100px;
+
+      .sponsor-item {
+        width: 30%;
+
+        .sponsor-name {
+          @include font-rem(21);
+
+          margin-block-end: 10px;
+          text-align: center;
+        }
+
+        .sponsor-logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          background-color: map.get($colors, 'white');
+          border-radius: 10px;
+        }
+      }
     }
   }
 }
