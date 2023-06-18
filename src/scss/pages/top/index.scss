@@ -407,6 +407,7 @@
       flex-wrap: wrap;
       row-gap: 60px;
       column-gap: 7%;
+      margin-block-start: 40px;
 
       .plan-function-card {
         width: 46.5%;
@@ -705,6 +706,32 @@
           border-left: 30px solid #c5a36e;
         }
       }
+    }
+  }
+}
+
+/* process
+--------------------------------------------- */
+#app {
+  .app {
+    padding-block-start: 100px;
+    padding-block-end: 120px;
+    text-align: center;
+
+    .app-image {
+      display: flex;
+      gap: 80px;
+      align-items: center;
+      justify-content: center;
+      margin-block: 50px;
+    }
+
+    .app-text {
+      @include font-rem(18);
+
+      max-width: 800px;
+      margin-inline: auto;
+      line-height: 2.2;
     }
   }
 }

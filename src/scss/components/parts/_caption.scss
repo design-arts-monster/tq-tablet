@@ -15,6 +15,10 @@
     display: block;
     text-align: center;
   }
+
+  .red {
+    color: map.get($colors, 'red');
+  }
 }
 
 h1,
