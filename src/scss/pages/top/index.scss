@@ -201,7 +201,7 @@
   .voice-wrap {
     position: relative;
     padding-block-start: 50px;
-    padding-block-end: 100px;
+    padding-block-end: 200px;
     background-color: #fff7ec;
 
     &::before {
@@ -228,43 +228,48 @@
 --------------------------------------------- */
 #generation {
   .generation-wrap {
+    position: relative;
     padding-block-start: 100px;
 
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 183px;
+      margin: auto;
+      content: '';
+      background: url('/images/pages/top/generation-wave.png') bottom center no-repeat;
+      translate: 0 -100%;
+    }
+
     .generation-caption {
-      @include font-rem(40);
+      @include font-rem(38);
 
+      position: relative;
+      padding-block-end: 30px;
+      padding-inline-end: 40px;
       font-weight: bold;
+      line-height: 1.3;
 
-      .voice {
-        position: relative;
-        display: inline-block;
-        width: 80px;
-        height: 80px;
-        margin-inline-start: 0.25em;
-        line-height: 80px;
-        color: map.get($colors, 'white');
-        text-align: center;
-        vertical-align: baseline;
-        background-color: map.get($colors, 'main');
-        border-radius: 999px;
-
-        &::after {
-          position: absolute;
-          right: 0;
-          bottom: -9px;
-          display: block;
-          width: 14px;
-          height: 25px;
-          content: '';
-          background-color: map.get($colors, 'main');
-          rotate: -41deg;
-        }
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 73px;
+        height: 79px;
+        content: '';
+        background: url('/images/pages/top/generation-q.png') center no-repeat;
       }
     }
 
     .generation-card {
       $offset: 40px;
 
+      position: relative;
       width: 57%;
       padding-block-end: 60px;
       background-color: #fff7ec;
@@ -275,7 +280,10 @@
         translate: $offset 0;
 
         .generation-card-image {
-          translate: -#{$offset} 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          translate: -#{$offset} 77.5%;
         }
       }
 
@@ -283,7 +291,10 @@
         translate: -#{$offset} 0;
 
         .generation-card-image {
-          translate: $offset 0;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          translate: $offset 77.5%;
         }
       }
 
@@ -317,6 +328,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      padding-block-end: 200px;
       margin-block-start: 75px;
     }
   }
