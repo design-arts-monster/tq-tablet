@@ -22,7 +22,7 @@
 --------------------------------------------- */
 #movie {
   .movie {
-    max-height: 453px;
+    padding-block: 100px;
     background-color: #edf5e0;
 
     .iframe {
@@ -40,7 +40,7 @@
   }
 
   .charm {
-    padding-block-start: 360px;
+    padding-block: 140px;
 
     .charm-caption {
       @include font-rem(38);
@@ -52,10 +52,16 @@
     .charm-text {
       @include font-rem(18);
 
+      flex: 1;
       line-height: 2.2;
     }
 
+    .charm-text-wrap {
+      display: flex;
+    }
+
     .charm-iamge {
+      width: 532px;
       margin-block-start: 70px;
       text-align: right;
     }
