@@ -901,3 +901,88 @@
     }
   }
 }
+
+/* Q&A
+--------------------------------------------- */
+#qa {
+  .qa {
+    padding-block: 100px;
+
+    .qa-wrap {
+      .qa-item {
+        &:not(:first-child) {
+          margin-block-start: 35px;
+        }
+
+        .qa-controller {
+          @include font-rem(21);
+
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          padding-block: 16px;
+          padding-inline-start: 73px;
+          font-weight: bold;
+          color: map.get($colors, 'green');
+          text-align: left;
+          background-color: #e9f2eb;
+          border-radius: 8px;
+
+          &::before,
+          &::after {
+            position: absolute;
+            top: 0;
+            right: 18px;
+            bottom: 0;
+            display: block;
+            width: 30px;
+            height: 2px;
+            margin: auto;
+            content: '';
+            background-color: map.get($colors, 'green');
+            transition: all 0.2s;
+          }
+
+          &::after {
+            rotate: 90deg;
+          }
+
+          &.open {
+            &::after {
+              rotate: 0deg;
+            }
+          }
+
+          .qa-q {
+            position: absolute;
+            top: -12px;
+            left: -5px;
+          }
+        }
+
+        .qa-content {
+          @include font-rem(18);
+
+          position: relative;
+          padding-block: 16px;
+          padding-inline-start: 73px;
+          margin-block-start: -8px;
+          color: map.get($colors, 'red');
+          background-color: map.get($colors, 'white');
+          border-radius: 0 0 8px 8px;
+
+          &::before {
+            @include font-rem(30);
+
+            position: absolute;
+            top: 14px;
+            left: 25px;
+            font-weight: bold;
+            line-height: 1;
+            content: 'A';
+          }
+        }
+      }
+    }
+  }
+}
