@@ -988,3 +988,45 @@
     }
   }
 }
+
+/* company
+--------------------------------------------- */
+#company {
+  .company {
+    padding-block: 100px;
+
+    .company-caption-text {
+      @include font-rem(20);
+
+      margin-block-start: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .company-table {
+      max-width: 800px;
+      margin-block-start: 60px;
+      margin-inline: auto;
+
+      tr {
+        th,
+        td {
+          padding-block: 20px;
+          text-align: left;
+        }
+
+        th {
+          width: 14%;
+          font-weight: bold;
+          color: map.get($colors, 'red');
+          border-bottom: 2px solid map.get($colors, 'red');
+        }
+
+        td {
+          padding-inline-start: 50px;
+          border-bottom: 1px solid #d69396;
+        }
+      }
+    }
+  }
+}
