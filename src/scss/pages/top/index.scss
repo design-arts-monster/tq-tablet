@@ -880,6 +880,24 @@
           }
         }
       }
+
+      .device-spec-content {
+        padding-block-start: 40px;
+      }
+
+      .device-spec-table {
+        margin-inline: auto;
+        text-align: center;
+
+        tr {
+          th,
+          td {
+            margin: 1px;
+            border-collapse: collapse;
+            border: 1px double #333;
+          }
+        }
+      }
     }
   }
 }
