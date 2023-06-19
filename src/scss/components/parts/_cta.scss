@@ -8,14 +8,78 @@
     @include font-rem(24);
 
     font-weight: bold;
+    color: map.get($colors, 'main');
     text-align: center;
   }
 
   .cp-cta-link {
     @include font-rem(24);
 
+    width: 100%;
     max-width: 440px;
+
+    &:has(.shipping) {
+      margin-block-start: 26px;
+    }
+  }
+
+  .cp-cta-wrap {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: center;
     margin-block-start: 30px;
-    margin-inline: auto;
+  }
+
+  .cp-cta-contact {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    padding-block-start: 20px;
+    padding-block-end: 15px;
+    text-align: center;
+    background-color: #fff7ec;
+    border-radius: 8px;
+
+    .cp-cta-contact-caption {
+      position: absolute;
+      top: -0.5em;
+      right: 0;
+      left: 0;
+      margin: auto;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .cp-cta-contact-tel {
+      @include font-rem(28);
+
+      position: relative;
+      display: inline-block;
+      padding-inline-start: 30px;
+      font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Arial, 'Noto Sans Japanese', 'Yu Gothic', Meiryo, sans-serif;
+      font-weight: bold;
+      color: map.get($colors, 'main');
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 24px;
+        height: 29px;
+        margin: auto;
+        content: '';
+        background-image: url('/images/components/cta/tel.png');
+      }
+    }
+
+    .cp-cta-contact-business {
+      @include font-rem(12);
+
+      font-weight: bold;
+      color: map.get($colors, 'main');
+    }
   }
 }

@@ -8,6 +8,20 @@
   color: map.get($colors, 'white');
   text-decoration: none;
 
+  &.shipping {
+    .cp-link-button-wrap {
+      &::before {
+        position: absolute;
+        top: -30px;
+        right: 0;
+        left: 0;
+        display: inline-block;
+        margin: auto;
+        content: url('/images/components/cta/free-shipping.png');
+      }
+    }
+  }
+
   .cp-link-button-wrap {
     display: flex;
     align-items: center;
