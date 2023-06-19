@@ -128,18 +128,22 @@
       justify-content: space-between;
 
       .support-heading {
+        @include font-rem(26);
+
         font-weight: bold;
         line-height: 1.2;
 
-        @include font-rem(28);
-
         .strong {
-          @include font-rem(42);
+          @include font-rem(38);
 
-          color: map.get($colors, 'main');
+          color: #03b8df;
 
           .num {
-            @include font-rem(75);
+            @include font-rem(80);
+          }
+
+          .percent {
+            @include font-rem(50);
           }
         }
       }
@@ -147,9 +151,18 @@
 
     .support-text-wrap {
       display: flex;
+      column-gap: 75px;
       align-items: center;
       justify-content: space-between;
       margin-block-start: 75px;
+
+      .support-text-image {
+        width: 285px;
+      }
+
+      .support-text-inner {
+        flex: 1;
+      }
 
       .support-text {
         @include font-rem(21);
