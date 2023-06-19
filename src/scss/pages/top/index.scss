@@ -1030,3 +1030,21 @@
     }
   }
 }
+
+/* dream
+--------------------------------------------- */
+#dream {
+  .dream {
+    position: relative;
+    padding-block: 100px;
+
+    .dream-caption {
+      @include font-rem(36);
+
+      position: absolute;
+      top: 200px + 100px;
+      left: 0;
+      font-weight: bold;
+    }
+  }
+}
