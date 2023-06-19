@@ -1,5 +1,6 @@
 // use map.get.
 @use 'sass:map';
+@import 'http://fonts.googleapis.com/earlyaccess/notosansjapanese.css';
 
 /* --------------------------------------------------------------
 # base style
@@ -17,7 +18,7 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Arial, 'Yu Gothic', Meiryo, sans-serif;
+  font-family: 'Noto Sans Japanese', 'Helvetica Neue', Helvetica, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Arial, 'Yu Gothic', Meiryo, sans-serif;
   line-height: 1.5;
   color: map.get($colors, 'black');
 
