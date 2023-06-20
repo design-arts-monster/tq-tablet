@@ -1437,6 +1437,10 @@
           font-weight: bold;
           color: map.get($colors, 'red');
           border-bottom: 2px solid map.get($colors, 'red');
+
+          @include mq-down('md') {
+            width: 20%;
+          }
         }
 
         td {
