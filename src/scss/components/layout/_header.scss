@@ -30,14 +30,20 @@
       }
 
       .header-contact-md {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 50px;
         height: 50px;
         line-height: 1;
         background-color: #d3e6b1;
         border-radius: 999px;
+
+        a {
+          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+        }
 
         img {
           width: 20px;
