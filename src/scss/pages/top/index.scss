@@ -780,13 +780,25 @@
       li {
         $offset: 40px;
 
+        @include mq-down('md') {
+          $offset: 20px;
+        }
+
         position: relative;
         margin-inline-start: $offset;
         background-color: map.get($colors, 'white');
         border-radius: 50px;
 
+        @include mq-down('md') {
+          border-radius: 20px;
+        }
+
         &:not(:first-child) {
           margin-block-start: 100px;
+
+          @include mq-down('md') {
+            margin-block-start: 60px;
+          }
         }
 
         &::before {
@@ -807,10 +819,22 @@
           counter-increment: item;
           background-color: map.get($colors, 'main');
           border-radius: 999px;
+
+          @include mq-down('md') {
+            @include font-rem(18);
+
+            top: -15px;
+            width: 40px;
+            height: 40px;
+          }
         }
 
         .process-flow-content {
           padding: 40px;
+
+          @include mq-down('md') {
+            padding: 20px;
+          }
         }
       }
 
@@ -829,6 +853,11 @@
           border-color: map.get($colors, 'gray') transparent transparent;
           border-style: solid;
           border-width: 28px 30px 0;
+
+          @include mq-down('md') {
+            bottom: -60px;
+            border-width: 14px 15px 0;
+          }
         }
       }
 
@@ -842,66 +871,10 @@
           flex: 1;
           text-align: center;
 
-          &.process-flow-content-case-user {
-            color: map.get($colors, 'blue');
-
-            &.process-arrow {
-              &::after {
-                border-color: map.get($colors, 'blue') transparent transparent;
-              }
-            }
-          }
-
-          &.process-flow-content-case-buyer {
-            color: map.get($colors, 'pink');
-
-            &.process-arrow {
-              &::after {
-                border-color: map.get($colors, 'pink') transparent transparent;
-              }
-            }
-          }
-
-          &:not(:first-of-type) {
-            &::before {
-              position: absolute;
-              top: 40px;
-              bottom: 40px;
-              left: -1px;
-              display: block;
-              width: 3px;
-              margin: auto;
-              content: '';
-              background-image: linear-gradient(to bottom, #000 3px, transparent 3px);
-              background-repeat: repeat-y;
-              background-position: left bottom;
-              background-size: 3px 8px;
-            }
-          }
-
           .process-flow-content-case-text {
             @include font-rem(18);
 
             font-weight: bold;
-          }
-
-          .process-flow-content-case-caption {
-            @include font-rem(24);
-
-            display: inline-flex;
-            align-items: center;
-            min-height: 2em * 1.5;
-            font-weight: bold;
-          }
-
-          .process-flow-content-case-description {
-            @include font-rem(18);
-
-            display: inline-flex;
-            align-items: center;
-            min-height: 2em * 1.6;
-            padding-inline: 20px;
-            color: map.get($colors, 'black');
           }
         }
       }
@@ -912,6 +885,10 @@
           column-gap: 60px;
           align-items: center;
           justify-content: center;
+
+          @include mq-down('md') {
+            column-gap: 30px;
+          }
         }
 
         .process-flow-entry-inner {
@@ -924,10 +901,20 @@
             margin-block-end: 30px;
             font-weight: bold;
             text-align: center;
+
+            @include mq-down('md') {
+              margin-block-end: 20px;
+
+              @include font-rem(18);
+            }
           }
 
           .cp-link-button {
             @include font-rem(21);
+
+            @include mq-down('md') {
+              @include font-rem(14);
+            }
 
             .cp-link-button-wrap {
               background-color: #295f35;
@@ -945,6 +932,10 @@
 
           font-weight: bold;
           text-align: center;
+
+          @include mq-down('md') {
+            @include font-rem(18);
+          }
         }
 
         .process-flow-signup-note {
@@ -956,6 +947,10 @@
 
         .process-flow-signup-content {
           margin-block-end: -160px;
+
+          @include mq-down('md') {
+            margin-block-end: -80px;
+          }
         }
       }
     }
@@ -967,6 +962,17 @@
       justify-content: center;
       margin-block-start: 100px;
 
+      @include mq-down('md') {
+        column-gap: 10px;
+        width: 80%;
+        margin-inline: auto;
+        translate: 10% 0;
+
+        .process-message-image {
+          width: 120px;
+        }
+      }
+
       .process-message-balloon {
         @include font-rem(21);
 
@@ -977,6 +983,13 @@
         color: map.get($colors, 'white');
         background-color: #c5a36e;
         border-radius: 20px;
+
+        @include mq-down('md') {
+          @include font-rem(16);
+
+          padding-block: 15px;
+          padding-inline: 20px;
+        }
 
         &::before {
           position: absolute;
@@ -1003,6 +1016,13 @@
           border-right: 0;
           border-bottom: 17px solid transparent;
           border-left: 30px solid #c5a36e;
+
+          @include mq-down('md') {
+            right: -15px;
+            border-top-width: 8px;
+            border-bottom-width: 8px;
+            border-left-width: 15px;
+          }
         }
       }
     }
