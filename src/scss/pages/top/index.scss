@@ -733,7 +733,7 @@
 
             display: inline-flex;
             align-items: center;
-            min-height: 2em * 1.25;
+            min-height: 2em * 1.5;
             font-weight: bold;
           }
 
@@ -779,18 +779,32 @@
       }
 
       .process-flow-signup {
+        position: relative;
+        z-index: 1;
+
         .process-flow-signup-caption {
           @include font-rem(24);
 
-          margin-block-end: 30px;
           font-weight: bold;
           text-align: center;
+        }
+
+        .process-flow-signup-note {
+          @include font-rem(14);
+
+          margin-block-end: 30px;
+          text-align: center;
+        }
+
+        .process-flow-signup-content {
+          margin-block-end: -160px;
         }
       }
     }
 
     .process-message {
       display: flex;
+      column-gap: 25px;
       align-items: center;
       justify-content: center;
       margin-block-start: 100px;
@@ -801,9 +815,21 @@
         position: relative;
         padding-block: 30px;
         padding-inline: 40px;
+        margin-block-end: 30px;
         color: map.get($colors, 'white');
         background-color: #c5a36e;
         border-radius: 20px;
+
+        &::before {
+          position: absolute;
+          top: -45px;
+          left: -45px;
+          display: block;
+          width: 49px;
+          height: 60px;
+          content: '';
+          background-image: url('/images/pages/top/process-message-balloon-notice.png');
+        }
 
         &::after {
           position: absolute;
