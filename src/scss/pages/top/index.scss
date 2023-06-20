@@ -306,6 +306,12 @@
       content: '';
       background: url('/images/pages/top/generation-wave.png') bottom center no-repeat;
       translate: 0 -100%;
+
+      @include mq-down('md') {
+        height: 96px;
+        background-image: url('/images/pages/top/generation-wave-md.png');
+        background-size: contain;
+      }
     }
 
     .generation-caption {
@@ -339,25 +345,45 @@
       border-radius: 20px;
       box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 20%);
 
+      @include mq-down('md') {
+        width: 100%;
+      }
+
       &.left {
         translate: $offset 0;
+
+        @include mq-down('md') {
+          translate: 0 0;
+        }
 
         .generation-card-image {
           position: absolute;
           bottom: 0;
           left: 0;
           translate: -#{$offset} 77.5%;
+
+          @include mq-down('md') {
+            translate: 0 77.5%;
+          }
         }
       }
 
       &.right {
         translate: -#{$offset} 0;
 
+        @include mq-down('md') {
+          translate: 0 0;
+        }
+
         .generation-card-image {
           position: absolute;
           right: 0;
           bottom: 0;
           translate: $offset 77.5%;
+
+          @include mq-down('md') {
+            translate: 0 77.5%;
+          }
         }
       }
 
@@ -385,6 +411,10 @@
       flex-direction: row-reverse;
       align-items: center;
       justify-content: space-between;
+
+      @include mq-down('md') {
+        flex-direction: column;
+      }
     }
 
     .generation-inner {
@@ -393,6 +423,10 @@
       justify-content: flex-end;
       padding-block-end: 200px;
       margin-block-start: 75px;
+
+      @include mq-down('md') {
+        margin-block-start: 200px;
+      }
     }
   }
 }
