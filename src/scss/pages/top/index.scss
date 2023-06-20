@@ -402,6 +402,14 @@
     .plan-heading {
       padding-block-end: 40px;
 
+      &.basic {
+        background: url('/images/pages/top/plan-basic-image.png') right bottom no-repeat;
+      }
+
+      &.premium {
+        background: url('/images/pages/top/plan-premium-image.png') right bottom no-repeat;
+      }
+
       .plan-caption {
         @include font-rem(26);
 
@@ -465,7 +473,7 @@
     }
 
     .plan-note {
-      @include font-rem(16);
+      @include font-rem(12);
 
       font-weight: bold;
     }
@@ -586,7 +594,6 @@
         @include font-rem(26);
 
         display: inline-block;
-        width: 40px;
         text-align: center;
       }
     }
