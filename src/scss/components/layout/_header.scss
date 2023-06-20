@@ -9,6 +9,12 @@
     justify-content: space-between;
     padding-inline: 4%;
 
+    .logo {
+      @include mq-down('md') {
+        width: 26%;
+      }
+    }
+
     .header-meta {
       display: flex;
       gap: 6%;
@@ -17,6 +23,27 @@
 
       .header-link {
         width: 220px;
+
+        @include mq-down('md') {
+          width: 180px;
+        }
+      }
+
+      .header-contact-md {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        line-height: 1;
+        background-color: #d3e6b1;
+        border-radius: 999px;
+
+        img {
+          width: 20px;
+          height: auto;
+          vertical-align: bottom;
+        }
       }
 
       .header-contact {
