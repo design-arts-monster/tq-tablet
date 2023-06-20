@@ -5,7 +5,7 @@
   padding-block-end: 60px;
 
   .cp-cta-text {
-    @include font-rem(24);
+    @include font-rem(18);
 
     font-weight: bold;
     color: map.get($colors, 'main');

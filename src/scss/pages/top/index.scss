@@ -61,7 +61,8 @@
     }
 
     .charm-iamge {
-      width: 532px;
+      width: 100%;
+      max-width: 53.2%;
       margin-block-start: 70px;
       text-align: right;
     }
@@ -181,7 +182,7 @@
       }
 
       .support-text {
-        @include font-rem(21);
+        @include font-rem(18);
 
         line-height: 1.9;
       }
@@ -404,10 +405,12 @@
 
       &.basic {
         background: url('/images/pages/top/plan-basic-image.png') right bottom no-repeat;
+        background-size: 61%;
       }
 
       &.premium {
         background: url('/images/pages/top/plan-premium-image.png') right bottom no-repeat;
+        background-size: 61%;
       }
 
       .plan-caption {
@@ -420,6 +423,11 @@
         font-weight: bold;
         border-radius: 0 0 28px;
         translate: calc((100vw - 1000px) / 2 * -1);
+
+        @media screen and (width <= 1040px) {
+          padding-inline-start: 40px;
+          translate: -20px;
+        }
       }
 
       .plan-heading-text {
@@ -468,14 +476,11 @@
     .plan-description {
       @include font-rem(18);
 
-      font-weight: bold;
       line-height: 1.88;
     }
 
     .plan-note {
       @include font-rem(12);
-
-      font-weight: bold;
     }
 
     &.green {
@@ -523,6 +528,7 @@
       flex-wrap: wrap;
       row-gap: 60px;
       column-gap: 7%;
+      justify-content: stretch;
       margin-block-start: 40px;
 
       .plan-function-card {
@@ -533,7 +539,7 @@
 
           display: inline-block;
           padding-block: 12px;
-          padding-inline: 70px;
+          padding-inline: 30px;
           font-weight: bold;
           color: map.get($colors, 'white');
           background-color: map.get($colors, 'green');
@@ -541,6 +547,7 @@
         }
 
         .plan-function-card-wrap {
+          height: calc(100% - 60px);
           overflow: hidden;
           background-color: map.get($colors, 'white');
           border-radius: 0 25px 25px;
@@ -741,6 +748,7 @@
             display: inline-flex;
             align-items: center;
             min-height: 2em * 1.6;
+            padding-inline: 20px;
             color: map.get($colors, 'black');
           }
         }
@@ -920,7 +928,7 @@
 
     .device-wrap {
       padding-block: 80px;
-      padding-inline: 100px;
+      padding-inline: 20px;
       background-color: map.get($colors, 'white');
       border-radius: 30px;
     }
@@ -931,7 +939,9 @@
       row-gap: 20px;
       align-items: stretch;
       justify-content: space-around;
+      max-width: 800px;
       margin-block-start: 60px;
+      margin-inline: auto;
 
       .col-2 {
         width: 50%;
@@ -958,13 +968,16 @@
       position: relative;
       display: flex;
       justify-content: flex-end;
+      max-width: 800px;
       margin-block-start: 150px;
+      margin-inline: auto;
 
       .device-image {
         position: absolute;
         top: -60px;
         left: 0;
         z-index: 2;
+        width: 45%;
       }
 
       .device-image-text {
@@ -1108,6 +1121,7 @@
           width: 100%;
           padding-block: 16px;
           padding-inline-start: 73px;
+          padding-inline-end: 60px;
           font-weight: bold;
           color: map.get($colors, 'green');
           text-align: left;
@@ -1152,6 +1166,7 @@
           position: relative;
           padding-block: 16px;
           padding-inline-start: 73px;
+          padding-inline-end: 60px;
           margin-block-start: -8px;
           color: map.get($colors, 'red');
           background-color: map.get($colors, 'white');
@@ -1226,7 +1241,7 @@
       @include font-rem(36);
 
       position: absolute;
-      top: 200px + 100px;
+      top: 16%;
       left: 0;
       font-weight: bold;
     }

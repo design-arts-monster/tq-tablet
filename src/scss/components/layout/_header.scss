@@ -7,11 +7,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-inline: 80px;
+    padding-inline: 4%;
 
     .header-meta {
       display: flex;
-      gap: 30px;
+      gap: 6%;
       align-items: center;
       justify-content: center;
 
@@ -20,6 +20,7 @@
       }
 
       .header-contact {
+        width: 200px;
         line-height: 1.35;
         color: map.get($colors, 'green');
         text-align: center;

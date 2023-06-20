@@ -4,7 +4,7 @@ $breakpoint-up: (
   // Tab最小～
   'sm': 'screen and (min-width: 520px)',
   // PC最小～
-  'md': 'screen and (min-width: 960px)',
+  'md': 'screen and (min-width: 780px)',
   // PC標準～
   'lg': 'screen and (min-width: 1280px)',
   // ノートPC FWXGA～,
@@ -16,7 +16,7 @@ $breakpoint-down: (
   // ～SP（ポートレート）最大
   'sm': 'screen and (max-width: 519px)',
   // ～Tab（ポートレート）最大
-  'md': 'screen and (max-width: 959px)',
+  'md': 'screen and (max-width: 779px)',
   // ～Tab（ランドスケープ）最大
   'lg': 'screen and (max-width: 1279px)',
   // ～ノートPC FWXGA最大
