@@ -443,6 +443,10 @@
 
   .price-caption {
     margin-block-end: 70px;
+
+    @include mq-down('md') {
+      margin-block-end: 40px;
+    }
   }
 
   .price-wrap {
@@ -474,6 +478,10 @@
       align-items: center;
       justify-content: center;
       margin-block-start: 45px;
+
+      @include mq-down('md') {
+        flex-direction: column;
+      }
 
       .price-content-separator {
         @include font-rem(26);
