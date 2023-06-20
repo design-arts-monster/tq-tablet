@@ -508,17 +508,29 @@
     padding-block-end: 140px;
     background-color: #fffcf7;
 
+    @include mq-down('md') {
+      padding-block-end: 80px;
+    }
+
     .plan-heading {
       padding-block-end: 40px;
 
       &.basic {
         background: url('/images/pages/top/plan-basic-image.png') right bottom no-repeat;
         background-size: 61%;
+
+        @include mq-down('md') {
+          background-position-y: 70%;
+        }
       }
 
       &.premium {
         background: url('/images/pages/top/plan-premium-image.png') right bottom no-repeat;
         background-size: 61%;
+
+        @include mq-down('md') {
+          background-position-y: 70%;
+        }
       }
 
       .plan-caption {
@@ -545,6 +557,10 @@
         margin-block-end: 1em;
         font-weight: bold;
         line-height: 1.55;
+
+        @include mq-down('md') {
+          @include font-rem(28);
+        }
       }
 
       .plan-traffic {
@@ -556,9 +572,17 @@
         font-weight: bold;
         border-radius: 5px;
 
+        @include mq-down('md') {
+          @include font-rem(18);
+        }
+
         .strong {
           .num {
             @include font-rem(32);
+
+            @include mq-down('md') {
+              @include font-rem(24);
+            }
           }
         }
       }
@@ -569,14 +593,26 @@
 
         .text {
           @include font-rem(20);
+
+          @include mq-down('md') {
+            @include font-rem(18);
+          }
         }
 
         .yen {
           @include font-rem(32);
+
+          @include mq-down('md') {
+            @include font-rem(21);
+          }
         }
 
         .price {
           @include font-rem(40);
+
+          @include mq-down('md') {
+            @include font-rem(26);
+          }
         }
       }
     }
@@ -642,6 +678,10 @@
       .plan-function-card {
         width: 46.5%;
 
+        @include mq-down('md') {
+          width: 100%;
+        }
+
         .plan-function-card-name {
           @include font-rem(24);
 
@@ -686,6 +726,10 @@
   .plan-cta {
     padding-block-start: 140px;
     padding-block-end: 110px;
+
+    @include mq-down('md') {
+      padding-block: 80px;
+    }
 
     .plan-cta-text {
       @include font-rem(30);
