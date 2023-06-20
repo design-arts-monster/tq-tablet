@@ -1068,8 +1068,17 @@
       column-gap: 5%;
       margin-block-start: 100px;
 
+      @include mq-down('md') {
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
       .sponsor-item {
         width: 30%;
+
+        @include mq-down('md') {
+          width: 100%;
+        }
 
         .sponsor-name {
           @include font-rem(21);
