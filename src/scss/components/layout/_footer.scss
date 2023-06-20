@@ -8,6 +8,10 @@
     margin-block-start: 100px;
     background-color: #f2f7e7;
 
+    @include mq-down('md') {
+      padding-block-start: 60px;
+    }
+
     &::before {
       position: absolute;
       top: 0;
@@ -20,6 +24,12 @@
       content: '';
       background: url('/images/pages/top/footer-wave.png') bottom center no-repeat;
       translate: 0 -100%;
+
+      @include mq-down('md') {
+        height: 90px;
+        background-image: url('/images/pages/top/footer-wave-md.png');
+        background-size: contain;
+      }
     }
 
     .cp-cta {
