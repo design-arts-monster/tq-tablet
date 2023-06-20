@@ -100,11 +100,23 @@
       content: '';
       background: url('/images/pages/top/worries-wave.png') bottom center no-repeat;
       translate: 0 -100%;
+
+      @include mq-down('md') {
+        height: 76px;
+        background-image: url('/images/pages/top/worries-wave-md.png');
+        background-size: contain;
+      }
     }
 
     .worries-caption {
       position: relative;
       display: inline-block;
+
+      @include mq-down('md') {
+        text-align: left;
+
+        @include font-rem(28);
+      }
 
       &::after {
         position: absolute;
@@ -117,6 +129,15 @@
         margin: auto;
         content: '';
         background: url('/images/pages/top/worries-caption-image.png') center no-repeat;
+
+        @include mq-down('md') {
+          top: -50%;
+          right: 0;
+          bottom: auto;
+          width: 95px;
+          height: 95px;
+          background-size: contain;
+        }
       }
     }
 
