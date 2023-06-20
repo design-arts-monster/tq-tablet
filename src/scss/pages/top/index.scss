@@ -928,6 +928,7 @@
     .device-bundle {
       display: flex;
       flex-wrap: wrap;
+      row-gap: 20px;
       align-items: stretch;
       justify-content: space-around;
       margin-block-start: 60px;
@@ -957,11 +958,11 @@
       position: relative;
       display: flex;
       justify-content: flex-end;
-      margin-block-start: 90px;
+      margin-block-start: 150px;
 
       .device-image {
         position: absolute;
-        top: 0;
+        top: -60px;
         left: 0;
         z-index: 2;
       }
@@ -1027,14 +1028,57 @@
 
       .device-spec-table {
         margin-inline: auto;
-        text-align: center;
+        overflow: hidden;
+        border-spacing: 0;
+        border-collapse: separate;
+        border: 2px solid #7c7c7c;
+        border-radius: 8px;
+
+        .device-spec-table-heading {
+          @include font-rem(18);
+
+          font-weight: bold;
+
+          .device-spec-table-heading-th {
+            width: 34%;
+            padding-inline: 0;
+            text-align: center;
+            background-color: #d3e6b1;
+          }
+
+          .device-spec-table-heading-td {
+            width: 66%;
+            padding-inline: 0;
+            color: map.get($colors, 'white');
+            text-align: center;
+            background-color: #7c7c7c;
+            border-left: 1px solid #7c7c7c;
+          }
+        }
 
         tr {
+          th {
+            background-color: #f6faef;
+            border-right: 1px solid #7c7c7c;
+          }
+
+          td {
+            border-left: 1px solid #7c7c7c;
+          }
+
           th,
           td {
-            margin: 1px;
-            border-collapse: collapse;
-            border: 1px double #333;
+            padding-block: 5px;
+            padding-inline: 18px 10px;
+            text-align: left;
+            vertical-align: middle;
+          }
+
+          &:not(:first-of-type) {
+            th,
+            td {
+              border-top: 1px solid #7c7c7c;
+            }
           }
         }
       }

@@ -541,18 +541,24 @@
         <div class="device">
           <div class="container">
             <div class="device-wrap">
-              <h2 class="cp-caption-black small">タブレットと付属品</h2>
+              <h2 class="cp-caption-black">タブレット本体と付属品</h2>
               <ul class="device-bundle">
                 <li class="device-bundle-item col-2">
                   <img src="/images/pages/top/device-tablet.png" alt="" />
                   <p class="device-bundle-item-name">タブレット本体（1台）</p>
                 </li>
                 <li class="device-bundle-item col-2">
-                  <img src="/images/pages/top/device-pen.png" alt="" />
+                  <picture>
+                    <source media="(max-width: 959px)" srcset="/images/pages/top/device-pen-md.png" />
+                    <img src="/images/pages/top/device-pen.png" alt="" />
+                  </picture>
                   <p class="device-bundle-item-name">タッチペン</p>
                 </li>
                 <li class="device-bundle-item col-3">
-                  <img src="/images/pages/top/device-adapter.png" alt="" />
+                  <picture>
+                    <source media="(max-width: 959px)" srcset="/images/pages/top/device-adapter-md.png" />
+                    <img src="/images/pages/top/device-adapter.png" alt="" />
+                  </picture>
                   <p class="device-bundle-item-name">ACアダプタ（1個）</p>
                 </li>
                 <li class="device-bundle-item col-3">
@@ -579,143 +585,143 @@
                 <div class="device-spec-content js-accordion-content">
                   <table class="device-spec-table">
                     <tbody>
-                      <tr>
-                        <th colspan="2">仕様項目</th>
-                        <th>概要説明</th>
+                      <tr class="device-spec-table-heading">
+                        <th colspan="2" class="device-spec-table-heading-th">仕様項目</th>
+                        <th class="device-spec-table-heading-td">概要説明</th>
                       </tr>
                       <tr>
-                        <td colspan="2">ソフトウェア</td>
+                        <th colspan="2">ソフトウェア</th>
                         <td>Android 11ベース（GMS非搭載）</td>
                       </tr>
                       <tr>
-                        <td colspan="2">LCD画面サイズ</td>
+                        <th colspan="2">LCD画面サイズ</th>
                         <td>8インチ</td>
                       </tr>
                       <tr>
-                        <td colspan="2">有効解像度</td>
+                        <th colspan="2">有効解像度</th>
                         <td>WXGA（1280x800）</td>
                       </tr>
                       <tr>
-                        <td colspan="2">タッチパネル</td>
+                        <th colspan="2">タッチパネル</th>
                         <td>タッチ方式：静電容量</td>
                       </tr>
                       <tr>
-                        <td>SoC</td>
-                        <td>メーカ・型番</td>
+                        <th>SoC</th>
+                        <th>メーカ・型番</th>
                         <td>MT6765 Octa Core 4xA53 2.3HGHz + 4xA53 1.8GHz</td>
                       </tr>
                       <tr>
-                        <td rowspan="2">内部メモリ</td>
-                        <td>RAM</td>
+                        <th rowspan="2">内部メモリ</th>
+                        <th>RAM</th>
                         <td>2GB</td>
                       </tr>
                       <tr>
-                        <td>ROM</td>
+                        <th>ROM</th>
                         <td>32GB</td>
                       </tr>
                       <tr>
-                        <td colspan="2">外部メモリ</td>
+                        <th colspan="2">外部メモリ</th>
                         <td>microSD（最大128GB） SD/SDHC/SDXC（FAT16、FAT32、exFAT対応）</td>
                       </tr>
                       <tr>
-                        <td rowspan="3">無線通信</td>
-                        <td>WirelessLAN</td>
+                        <th rowspan="3">無線通信</th>
+                        <th>WirelessLAN</th>
                         <td>Dual-band（2.4GHz/5GHz）<br />802.11 a/b/g/n/ac</td>
                       </tr>
                       <tr>
-                        <td>Bluetooth</td>
+                        <th>Bluetooth</th>
                         <td>V5.0</td>
                       </tr>
                       <tr>
-                        <td>Cellular</td>
+                        <th>Cellular</th>
                         <td>3G(WCDMA):B1/B8/B19<br />4G:B1/B3/B8/B18/B19/B26/B41</td>
                       </tr>
                       <tr>
-                        <td colspan="2">カメラ</td>
+                        <th colspan="2">カメラ</th>
                         <td>200万画素</td>
                       </tr>
                       <tr>
-                        <td colspan="2">センサ</td>
+                        <th colspan="2">センサ</th>
                         <td>加速度センサー</td>
                       </tr>
                       <tr>
-                        <td colspan="2">バイブレーション機能</td>
+                        <th colspan="2">バイブレーション機能</th>
                         <td>有</td>
                       </tr>
                       <tr>
-                        <td colspan="2">スイッチ</td>
+                        <th colspan="2">スイッチ</th>
                         <td>電源、ボリューム（＋/－）、homeキー</td>
                       </tr>
                       <tr>
-                        <td rowspan="2">オーディオ</td>
-                        <td>内蔵マイク</td>
+                        <th rowspan="2">オーディオ</th>
+                        <th>内蔵マイク</th>
                         <td>有</td>
                       </tr>
                       <tr>
-                        <td>内蔵スピーカー</td>
+                        <th>内蔵スピーカー</th>
                         <td>有（8Ω/1W）</td>
                       </tr>
                       <tr>
-                        <td rowspan="2">外部接続</td>
-                        <td>USB</td>
+                        <th rowspan="2">外部接続</th>
+                        <th>USB</th>
                         <td>Type-C USB2.0 x 1ポート（USB-PD3.0対応）<br />マグネット脱着式</td>
                       </tr>
                       <tr>
-                        <td>SIM</td>
+                        <th>SIM</th>
                         <td>nanoSIMスロットx1</td>
                       </tr>
                       <tr>
-                        <td colspan="2">バッテリ</td>
+                        <th colspan="2">バッテリ</th>
                         <td>5,000mAh</td>
                       </tr>
                       <tr>
-                        <td colspan="2">消費電力</td>
+                        <th colspan="2">消費電力</th>
                         <td>約10W以下</td>
                       </tr>
                       <tr>
-                        <td colspan="2">連続待受時間</td>
+                        <th colspan="2">連続待受時間</th>
                         <td>250時間(静止時)</td>
                       </tr>
                       <tr>
-                        <td>構造</td>
-                        <td>モールドケース</td>
+                        <th>構造</th>
+                        <th>モールドケース</th>
                         <td>クリーム色<br />材質：PC / 表面処理：塗装</td>
                       </tr>
                       <tr>
-                        <td colspan="2">防水/防塵性</td>
+                        <th colspan="2">防水/防塵性</th>
                         <td>非対応</td>
                       </tr>
                       <tr>
-                        <td colspan="2">外形寸法</td>
+                        <th colspan="2">外形寸法</th>
                         <td>約221(W)x125(H)x93(D)（mm）</td>
                       </tr>
                       <tr>
-                        <td colspan="2">重量</td>
+                        <th colspan="2">重量</th>
                         <td>約608g</td>
                       </tr>
                       <tr>
-                        <td colspan="2">動作温度</td>
+                        <th colspan="2">動作温度</th>
                         <td>温度：0～40℃ / 湿度：30～90%RH（結露無きこと）</td>
                       </tr>
                       <tr>
-                        <td colspan="2">保存温度</td>
+                        <th colspan="2">保存温度</th>
                         <td>温度：-10～50℃ / 湿度：30～90%RH（結露無きこと）</td>
                       </tr>
                       <tr>
-                        <td rowspan="4">標準添付品</td>
-                        <td>USBケーブル</td>
+                        <th rowspan="4">標準添付品</th>
+                        <th>USBケーブル</th>
                         <td>マグネット脱着コネクタ（充電タイプ） / ケーブル長：2m<br />Type-A(オス) Type-C(マグネット)、USB2.0 HighSpeed/USB-PD3.0対応品</td>
                       </tr>
                       <tr>
-                        <td>USB電源アダプタ</td>
+                        <th>USB電源アダプタ</th>
                         <td>USB-PD3.0対応品（PSE認証）</td>
                       </tr>
                       <tr>
-                        <td>取扱説明書</td>
+                        <th>取扱説明書</th>
                         <td>サイズ/ページ数：A4/1枚</td>
                       </tr>
                       <tr>
-                        <td>保証書</td>
+                        <th>保証書</th>
                         <td>取扱説明書に記載</td>
                       </tr>
                     </tbody>
