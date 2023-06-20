@@ -167,12 +167,27 @@
       content: '';
       background: url('/images/pages/top/support-wave.png') bottom center no-repeat;
       translate: 0 -100%;
+
+      @include mq-down('md') {
+        height: 98px;
+        background-image: url('/images/pages/top/support-wave-md.png');
+        background-size: contain;
+      }
     }
 
     .support-heading-wrap {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include mq-down('md') {
+        flex-direction: column-reverse;
+        gap: 30px;
+
+        .support-heading-image {
+          max-width: 60%;
+        }
+      }
 
       .support-heading {
         @include font-rem(26);
@@ -203,8 +218,17 @@
       justify-content: space-between;
       margin-block-start: 75px;
 
+      @include mq-down('md') {
+        flex-direction: column;
+        gap: 30px;
+      }
+
       .support-text-image {
         width: 285px;
+
+        @include mq-down('md') {
+          width: 60%;
+        }
       }
 
       .support-text-inner {
