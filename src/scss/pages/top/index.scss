@@ -608,12 +608,11 @@
     background-color: #e7f3e4;
 
     .process-text {
-      @include font-rem(21);
+      @include font-rem(18);
 
       margin-block-start: 40px;
       font-weight: bold;
       line-height: 1.7;
-      text-align: center;
     }
 
     .process-flow {
