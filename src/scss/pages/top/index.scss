@@ -866,11 +866,12 @@
     }
 
     .app-text {
-      @include font-rem(18);
+      @include font-rem(20);
 
       max-width: 800px;
       margin-inline: auto;
       line-height: 2.2;
+      text-align: left;
     }
   }
 }
