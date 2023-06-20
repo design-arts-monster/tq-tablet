@@ -273,6 +273,12 @@
       content: '';
       background: url('/images/pages/top/voice-wave.png') bottom center no-repeat;
       translate: 0 -100%;
+
+      @include mq-down('md') {
+        height: 78px;
+        background-image: url('/images/pages/top/voice-wave-md.png');
+        background-size: contain;
+      }
     }
 
     .voice-content {
