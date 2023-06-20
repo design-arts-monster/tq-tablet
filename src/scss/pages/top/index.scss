@@ -25,6 +25,10 @@
     padding-block: 100px;
     background-color: #edf5e0;
 
+    @include mq-down('md') {
+      padding-block: 60px;
+    }
+
     .iframe {
       position: relative;
       z-index: 2;
@@ -41,6 +45,10 @@
 
   .charm {
     padding-block: 140px;
+
+    @include mq-down('md') {
+      padding-block: 60px;
+    }
 
     .charm-caption {
       @include font-rem(38);
@@ -157,6 +165,10 @@
     padding-block-start: 50px;
     padding-block-end: 200px;
 
+    @include mq-down('md') {
+      padding-block: 80px;
+    }
+
     &::before {
       position: absolute;
       top: 0;
@@ -227,6 +239,7 @@
 
       .support-text-image {
         width: 285px;
+        text-align: center;
 
         @include mq-down('md') {
           width: 60%;
@@ -261,6 +274,10 @@
     padding-block-end: 200px;
     background-color: #fff7ec;
 
+    @include mq-down('md') {
+      padding-block: 80px;
+    }
+
     &::before {
       position: absolute;
       top: 0;
@@ -293,6 +310,10 @@
   .generation-wrap {
     position: relative;
     padding-block-start: 100px;
+
+    @include mq-down('md') {
+      padding-block: 80px;
+    }
 
     &::before {
       position: absolute;
@@ -440,6 +461,10 @@
 #price {
   padding-block: 90px;
   background-color: #fffcf7;
+
+  @include mq-down('md') {
+    padding-block: 60px;
+  }
 
   .price-caption {
     margin-block-end: 70px;
@@ -766,6 +791,10 @@
     padding-block: 90px;
     background-color: #e7f3e4;
 
+    @include mq-down('md') {
+      padding-block: 60px;
+    }
+
     .process-text {
       @include font-rem(18);
 
@@ -1037,6 +1066,10 @@
     padding-block-end: 120px;
     text-align: center;
 
+    @include mq-down('md') {
+      padding-block: 60px;
+    }
+
     .app-image {
       display: flex;
       gap: 80px;
@@ -1062,6 +1095,10 @@
   .sponsor {
     padding-block: 100px;
     background-color: #f9f0e7;
+
+    @include mq-down('md') {
+      padding-block: 60px;
+    }
 
     .sponsor-wrap {
       display: flex;
@@ -1311,8 +1348,16 @@
   .qa {
     padding-block: 100px;
 
+    @include mq-down('md') {
+      padding-block: 60px;
+    }
+
     .qa-wrap {
       padding-block-start: 80px;
+
+      @include mq-down('md') {
+        padding-block-start: 40px;
+      }
 
       .qa-item {
         &:not(:first-child) {
@@ -1411,6 +1456,10 @@
 #company {
   .company {
     padding-block: 100px;
+
+    @include mq-down('md') {
+      padding-block: 60px;
+    }
 
     .company-caption-text {
       @include font-rem(20);
