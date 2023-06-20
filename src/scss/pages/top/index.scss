@@ -1112,6 +1112,10 @@
       padding-inline: 20px;
       background-color: map.get($colors, 'white');
       border-radius: 30px;
+
+      @include mq-down('md') {
+        padding-block: 40px;
+      }
     }
 
     .device-bundle {
@@ -1124,12 +1128,26 @@
       margin-block-start: 60px;
       margin-inline: auto;
 
+      @include mq-down('md') {
+        flex-direction: column;
+        justify-content: center;
+        margin-block-start: 30px;
+      }
+
       .col-2 {
         width: 50%;
+
+        @include mq-down('md') {
+          width: 100%;
+        }
       }
 
       .col-3 {
         width: 33%;
+
+        @include mq-down('md') {
+          width: 100%;
+        }
       }
 
       .device-bundle-item {
@@ -1170,6 +1188,12 @@
         line-height: 1.9;
         background-color: #cceff1;
         border-radius: 20px;
+
+        @include mq-down('md') {
+          @include font-rem(16);
+
+          padding: 20px;
+        }
       }
     }
 
@@ -1257,6 +1281,7 @@
           }
 
           td {
+            background-color: map.get($colors, 'white');
             border-left: 1px solid #7c7c7c;
           }
 
