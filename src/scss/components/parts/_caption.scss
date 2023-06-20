@@ -8,6 +8,10 @@
     @include font-rem(30);
   }
 
+  @include mq-down('md') {
+    @include font-rem(28);
+  }
+
   font-weight: bold;
   text-align: center;
 

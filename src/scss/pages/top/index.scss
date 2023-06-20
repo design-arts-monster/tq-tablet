@@ -47,6 +47,10 @@
 
       margin-block-end: 1.3em;
       font-weight: bold;
+
+      @include mq-down('md') {
+        @include font-rem(28);
+      }
     }
 
     .charm-text {
@@ -114,8 +118,6 @@
 
       @include mq-down('md') {
         text-align: left;
-
-        @include font-rem(28);
       }
 
       &::after {
