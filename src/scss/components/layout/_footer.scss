@@ -1,30 +1,67 @@
 /* footer
 --------------------------------------------- */
 #footer {
-  margin-block-start: 100px;
+  .footer {
+    position: relative;
+    padding-block-start: 140px;
+    padding-block-end: 40px;
+    margin-block-start: 100px;
+    background-color: #f2f7e7;
 
-  .footer-nav {
-    padding-block: 20px;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 140px;
+      margin: auto;
+      content: '';
+      background: url('/images/pages/top/footer-wave.png') bottom center no-repeat;
+      translate: 0 -100%;
+    }
 
-    .footer-nav-list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .cp-cta {
+      .cp-cta-text {
+        @include font-rem(18);
+      }
 
-      li {
-        padding-inline: 1rem;
-        line-height: 1.2;
+      .cp-cta-wrap {
+        flex-direction: column;
+        row-gap: 35px;
 
-        &:not(:first-child) {
-          border-inline-start: 1px solid map.get($colors, 'black');
+        .cp-cta-contact {
+          background-color: map.get($colors, 'white');
         }
       }
     }
-  }
 
-  .copyright {
-    padding-block: 20px;
-    text-align: center;
-    background-color: map.get($colors, 'gray-light');
+    .footer-nav {
+      padding-block: 10px;
+
+      .footer-nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          @include font-rem(14);
+
+          padding-inline: 1rem;
+          line-height: 1.2;
+
+          &:not(:first-child) {
+            border-inline-start: 1px solid map.get($colors, 'black');
+          }
+        }
+      }
+    }
+
+    .copyright {
+      @include font-rem(12);
+
+      text-align: center;
+    }
   }
 }
