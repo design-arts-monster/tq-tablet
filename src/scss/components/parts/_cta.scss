@@ -7,9 +7,20 @@
   .cp-cta-text {
     @include font-rem(18);
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
     color: map.get($colors, 'main');
     text-align: center;
+
+    &::before {
+      content: '＼';
+    }
+
+    &::after {
+      content: '／';
+    }
   }
 
   .cp-cta-link {
@@ -25,10 +36,14 @@
 
   .cp-cta-wrap {
     display: flex;
-    column-gap: 40px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     margin-block-start: 30px;
+
+    @include mq-down('md') {
+      flex-direction: column;
+    }
   }
 
   .cp-cta-contact {
