@@ -6,6 +6,10 @@
 
   &.small {
     @include font-rem(30);
+
+    @include mq-down('md') {
+      @include font-rem(28);
+    }
   }
 
   @include mq-down('md') {
