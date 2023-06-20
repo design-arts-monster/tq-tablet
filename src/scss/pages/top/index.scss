@@ -1334,6 +1334,10 @@
           background-color: #e9f2eb;
           border-radius: 8px;
 
+          @include mq-down('md') {
+            padding-inline-start: 60px;
+          }
+
           &::before,
           &::after {
             position: absolute;
@@ -1363,6 +1367,10 @@
             position: absolute;
             top: -12px;
             left: -5px;
+
+            @include mq-down('md') {
+              width: 40px;
+            }
           }
         }
 
@@ -1377,6 +1385,10 @@
           color: map.get($colors, 'red');
           background-color: map.get($colors, 'white');
           border-radius: 0 0 8px 8px;
+
+          @include mq-down('md') {
+            padding-inline-start: 60px;
+          }
 
           &::before {
             @include font-rem(30);
