@@ -7,19 +7,41 @@
   .cp-cta-text {
     @include font-rem(18);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: map.get($colors, 'main');
     text-align: center;
 
-    &::before {
-      content: '＼';
-    }
+    .text {
+      position: relative;
+      display: inline-block;
+      padding-inline: 1em;
+      font-weight: bold;
+      color: map.get($colors, 'main');
 
-    &::after {
-      content: '／';
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: block;
+        width: 2px;
+        height: 1em;
+        margin: auto;
+        content: '';
+        background-color: map.get($colors, 'main');
+
+        @include mq-down('md') {
+          height: 1.5em;
+        }
+      }
+
+      &::before {
+        left: 0;
+        rotate: -30deg;
+      }
+
+      &::after {
+        right: 0;
+        rotate: 30deg;
+      }
     }
   }
 
@@ -75,6 +97,10 @@
       font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Arial, 'Noto Sans Japanese', 'Yu Gothic', Meiryo, sans-serif;
       font-weight: bold;
       color: map.get($colors, 'main');
+
+      a {
+        color: map.get($colors, 'main');
+      }
 
       &::before {
         position: absolute;

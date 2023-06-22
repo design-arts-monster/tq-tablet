@@ -13,6 +13,10 @@
       @include mq-down('md') {
         width: 26%;
       }
+
+      img {
+        vertical-align: bottom;
+      }
     }
 
     .header-meta {
