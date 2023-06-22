@@ -578,7 +578,7 @@
         border-radius: 0 0 28px;
         translate: calc((100vw - 1000px) / 2 * -1);
 
-        @media screen and (width <= 1040px) {
+        @include mq-down('cnt') {
           padding-inline-start: 40px;
           translate: -20px;
         }
